@@ -10,8 +10,7 @@ const TypingEffect = () => {
     const delay = 100;
 
     // Get the target element
-    const typingElement: HTMLElement | Element | null =
-      document.querySelector("#free-the-world");
+    const typingElement: any = document.querySelector("#free-the-world");
 
     // Function to simulate typing effect
     const typeEffect = (text: string, index: any) => {
