@@ -9,6 +9,7 @@ export async function POST(req: Request, res: Response) {
   const body = await req.json();
   const { name, email, phone } = body;
   console.log(body);
+  console.log(process.env.HOST, process.env.SMTP_USER, process.env.SMTP_PASS);
   const transporter = nodemailer.createTransport({
     host: process.env.HOST,
     secure: true,
@@ -37,23 +38,6 @@ export async function POST(req: Request, res: Response) {
     text: ``,
     html: output,
   };
-
-  // let response = await transporter.sendMail(mailOption, (err: any, sent: any) => {
-  //   let response: ApiResponse;
-  //   if (err) {
-  //     console.log(err);
-  //     console.log('couldn\'t send mail')
-  //      response = {
-  //       message: "Oops ! Something went wrong, please try again"
-  //     }
-  //     return NextResponse.json(response, {status: 500});
-  //   }
-
-  //   response = {
-  //     message: "Your request has been successfully sent to Serve Others ✔"
-  //   }
-  //   return NextResponse.json(response, {status: 200});
-  // });
 
   try {
     const sent = await transporter.sendMail(mailOption);
