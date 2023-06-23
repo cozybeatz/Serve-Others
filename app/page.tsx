@@ -5,6 +5,7 @@ import FormSection from "./components/FormSection";
 import Header from "./components/Header";
 import Partners from "./components/Partners";
 import Biography from "./components/Biography";
+import Footer from "./components/Footer";
 import { ToastContainer } from "react-toastify";
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
         <div className="flex justify-center items-center space-x-1 w-full py-6">
           <FaShieldAlt className="text-stone-800" />
           <p className={`text-black font-medium ${grotesque.className}`}>
-            serveothers.com
+            serveothers.cc
           </p>
         </div>
 
@@ -28,6 +29,7 @@ export default function Home() {
         <FormSection />
         <Partners />
         <Biography />
+        <Footer />
       </main>
     </>
   );

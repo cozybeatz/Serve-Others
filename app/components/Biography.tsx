@@ -2,14 +2,8 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { manrope } from "../fonts";
-import { useInView } from "react-intersection-observer";
 
 export default function Biography() {
-  const [ref, inView] = useInView({
-    triggerOnce: true, // Hide element after it becomes visible
-    threshold: 0.5, // Adjust the threshold as needed (0.5 means at least 50% of the element is visible)
-  });
-
   return (
     <>
       <div
