@@ -3,7 +3,7 @@ import { useState } from "react";
 const useButtonState = () => {
   const [buttonState, setButtonState] = useState({
     bgColor: null,
-    text: "Join Now",
+    text: "",
   });
 
   const handleButtonState = (text: string, bgColor: any) => {

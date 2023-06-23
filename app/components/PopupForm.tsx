@@ -102,7 +102,7 @@ const PopupForm = () => {
           </div>
 
           <Button
-            text={buttonState.text}
+            text={buttonState.text || "Confirm My Free Trial"}
             font={grotesque}
             type="Button"
             fn={() => ""}

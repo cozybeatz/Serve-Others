@@ -82,7 +82,7 @@ export default function FormSection() {
             </div>
 
             <Button
-              text={buttonState.text}
+              text={buttonState.text || "Join Now"}
               font={grotesque}
               type="Button"
               fn={() => ""}
